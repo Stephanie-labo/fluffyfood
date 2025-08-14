@@ -1,0 +1,8 @@
+<div class="form-group">
+  <label *ngIf="label" [for]="controlName">{{ label }}</label>
+  <select [id]="control.key" [formControlName]="controlName">
+    <option *ngFor="let item of data" [value]="item.value">
+      {{  optionLabel() }}
+    </option>
+  </select>
+</div>

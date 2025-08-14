@@ -1,15 +1,9 @@
-function calculateRER(weightKg) {
+function calculateRER(weightKg:number) {
   return 70 * Math.pow(weightKg, 0.75);
 }
 
-function getEnergyFactor({ isSterilized, activityLevel, breed }) {
-  const baseFactors = {
-    'Huiskat': 1.2,
-    'Maine Coon': 1.3,
-    'Britse Korthaar': 1.2,
-    'Sphynx': 1.4,
-    'Ragdoll': 1.2,
-  };
+function getEnergyFactor({ isSterilized:boolean, activityLevel:string, breed:CatBreedFactor }) {
+
 
   let factor = baseFactors[breed] || 1.2;
 
@@ -23,7 +17,7 @@ function getEnergyFactor({ isSterilized, activityLevel, breed }) {
   return Math.max(factor, 1.0); // ondergrens
 }
 
-function calculateDailyCalories(weightKg, options) {
+function calculateDailyCalories(weightKg:number, options:object) {
   const rer = calculateRER(weightKg);
   const factor = getEnergyFactor(options);
   return Math.round(rer * factor);
