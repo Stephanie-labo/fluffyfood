@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
-import { Form, FormControl } from "@angular/forms";
+import { Form, FormControl, FormGroup } from "@angular/forms";
 import { DropdownInterface } from "../../types/dropdown.interface";
 
 @Component({
@@ -9,7 +9,7 @@ import { DropdownInterface } from "../../types/dropdown.interface";
 })
 export class InputComponent {
   @Input() label?: string;
-  @Input() control!: FormControl;
-  @Input() controlName!: string;
+  @Input() form!: FormGroup;
+  @Input() control!: string;
   @Input() type: string = "text";
 }

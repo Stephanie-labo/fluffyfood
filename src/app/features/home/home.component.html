@@ -1,33 +1,30 @@
 <div class="home-container --grid">
-  <form [name]="form" novalidate [onsubmit]="onSubmit()">
-    <app-dropdown
-      label="Ras"
-      [control]="form.controls.breed"
-      [data]="breeds"
-      controlName="breed"
-    >
+  <form [name]="form" novalidate (ngSubmit)="onSubmit()">
+    <app-dropdown label="Ras" [form]="form" control="breed" [data]="breeds">
     </app-dropdown>
 
     <app-dropdown
       label="Activiteit"
-      [control]="form.controls.activity"
+      [form]="form"
+      control="activity"
       [data]="activityLevel"
-      controlName="activity"
     >
     </app-dropdown>
 
     <app-dropdown
       label="Gesterialiseerd"
-      [control]="form.controls.status"
+      [form]="form"
+      control="status"
       [data]="catstatus"
-      controlName="status"
     >
     </app-dropdown>
     <app-input
       label="gewicht"
-      [control]="form.controls.weight"
+      [form]="form"
+      control="weight"
       type="number"
-      controlName="weight"
     ></app-input>
+    <button type="submit">miauw</button>
   </form>
+  <div>{{ dailyCalories }}</div>
 </div>

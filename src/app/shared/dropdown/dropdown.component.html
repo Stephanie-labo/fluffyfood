@@ -1,8 +1,8 @@
-<div class="form-group">
-  <label *ngIf="label" [for]="controlName">{{ label }}</label>
-  <select [id]="controlName" [formControlName]="controlName">
+<div class="form-group" [formGroup]="form">
+  <label *ngIf="label" [for]="control">{{ label }}</label>
+  <select [formControlName]="control" [id]="control">
     <option *ngFor="let item of data" [value]="item.value">
-      {{  item.label}}
+      <span [innerText]="optionLabel(item)"></span>
     </option>
   </select>
 </div>
