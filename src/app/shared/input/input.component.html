@@ -1,9 +1,17 @@
-<div class="form-group">
-  <label *ngIf="label" [for]="control">{{ label }}</label>
-  <input
-    [type]="type"
-    [formControlName]="control"
-    [id]="control"
-    [value]="formGroup.value[control]"
-  />
+<div class="form-group" [formGroup]="formGroup">
+  <div>
+    <label *ngIf="label" [for]="control">{{ label }}</label>
+    <input
+      [type]="type"
+      [formControlName]="control"
+      [id]="control"
+      [value]="formGroup.value[control]"
+      step="0.1"
+      required
+    />
+    <span>kg</span>
+  </div>
+  <div class="error-message --full-width" *ngIf="controlHasError()">
+    {{ error }}
+  </div>
 </div>
