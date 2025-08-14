@@ -1,0 +1,55 @@
+:root {
+  --color-primairy: var(--color-rain-2);
+  --color-secondairy: var(--color-rain-3);
+  --color-primairy-darker: var(--color-rain-1);
+  --color-primairy-dark: ar(--color-rain-5);
+  --color-secondairy-light: var(--color-rain-4);
+  --color-text: var(--color-white);
+  --color-background: var(--color-primairy-darker);
+  --color-white: #fff;
+  --color-focus: #e6c0e9;
+  --color-error:#BC2020;
+  //rain colors
+  --color-rain-1: #515f7a;
+  --color-rain-2: #8290ac;
+  --color-rain-3: #bcc7cc;
+  --color-rain-4: #d5d9e0;
+  --color-raing-5: #8c96a1;
+  // stormy colors
+  --color-stormy-1: #001c3d;
+  --color-stormy-2: #003366;
+  --color-stormy-3: #00468c;
+  --color-stormy-4: #202223;
+  --color-stormy-5: #35383a;
+
+  // clear colors
+  --color-clear-1: #02bffe;
+  --color-clear-2: #65e9ff;
+  --color-clear-3: #b2feff;
+  --color-clear-4: #fdfdff;
+  --color-clear-5: #ffe127;
+  //snow
+  --color-snow-1: #49c8f5;
+  --color-snow-2: #afe1fc;
+  --color-snow-3: #C5D4DB;
+  --color-snow-4: #e2f3fd;
+  --color-snow-5: #4a5d65;
+
+  //foggy
+  --color-fog-1: #b4b9d5;
+  --color-fog-2: #e7baa1;
+  --color-fog-3: #eed9c4;
+  --color-fog-4: #eeeeee;
+  --color-fog-5: #b68a75;
+}
+body.sun{
+  :root{
+  --color-primairy: var(--color-sun-2);
+  --color-secondairy: var(--color-sun-3);
+  --color-primairy-darker: var(--color-sun-1);
+  --color-primairy-dark: ar(--color-sun-5);
+  --color-secondairy-light: var(--color-sun-4);
+  --color-text: var(--color-white);
+  --color-background: var(--color-primairy-darker);
+  }
+}

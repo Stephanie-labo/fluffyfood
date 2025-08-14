@@ -1,0 +1,22 @@
+<dialog id="dialog" autofocus
+   role="dialog"
+   aria-describedby="content-area"
+   aria-labelledby="Pop-up onderdeel">
+   <div class="dialog-container">
+
+
+  <header>
+    <h2>{{header}}</h2>
+    <button (click)="close()" class="tertiary small no-border" role="button" aria-label="close dialog" >X</button>
+      <!--make it flexible-->
+  </header>
+
+  <div>
+    <p>{{body}}</p>
+  </div>
+
+  <footer>
+    <!--make sure its added with component-->
+  </footer>
+   </div>
+</dialog>

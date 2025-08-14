@@ -1,0 +1,54 @@
+:root {
+  --font-light: 300;
+  --font-normal: 400;
+  --font-bold: 600;
+  --font-family: "Lexend Deca", sans-serif;
+
+  --font-size-s: 12px;
+  --font-size-m: 14px;
+  --font-size-l: 16px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 24px;
+  --font-size-xxxl: 26px;
+    --font-size-xxxxl: 80px;
+}
+h1 {
+  --font-size: var(--font-size-xxxl);
+
+  font-size: var(--font-size);
+  font-weight: var(--font-bold);
+  line-height: calc(var(--font-size) * 1.5);
+
+}
+h2 {
+  --font-size: var(--font-size-xxl);
+
+  font-size: var(--font-size);
+  font-weight: var(--font-bold);
+  line-height: calc(var(--font-size) * 1.5);
+
+}
+h3 {
+  --font-size: var(--font-size-xl);
+
+  font-size: var(--font-size);
+  font-weight: var(--font-bold);
+  line-height: calc(var(--font-size) * 1.5);
+
+}
+h4 {
+  --font-size: var(--font-size-l);
+
+  font-size: var(--font-size);
+  font-weight: var(--font-bold);
+  line-height: calc(var(--font-size) * 1.5);
+
+}
+h5 {
+  --font-size: var(--font-size-m);
+
+  font-size: var(--font-size);
+  font-weight: var(--font-bold);
+  line-height: calc(var(--font-size) * 1.5);
+ 
+}

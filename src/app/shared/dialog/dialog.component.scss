@@ -1,0 +1,29 @@
+.dialog-container {
+  padding: var(--spacing-1-5, 1.5em);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 0;
+  outline: 0;
+  background-color: var(--color-white);
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-0-5, 0.5em);
+  }
+}
+
+#dialog {
+  border: 0;
+  outline: 0;
+  &::backdrop {
+    --background: var(--color-background);
+    background: var(--background);
+    opacity: 0.6;
+  }
+}

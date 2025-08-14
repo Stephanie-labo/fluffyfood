@@ -1,0 +1,11 @@
+.home-container{
+    display:flex;
+    flex-direction: column;
+    align-items:stretch;
+    justify-content: stretch;
+    width:100%;
+    h4{
+        display:flex;
+        justify-content: center;
+    }
+}
