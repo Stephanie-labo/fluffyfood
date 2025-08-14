@@ -10,15 +10,6 @@ import { DropdownInterface } from "../../types/dropdown.interface";
 export class InputComponent {
   @Input() label?: string;
   @Input() control!: FormControl;
-  @Input() controlName!:string;
-  @Input() data!: DropdownInterface[];
-
-  selectedItem!: any;
-
-
-  optionLabel(item: DropdownInterface): string {
-    return item.description
-      ? `${item.label} - ${item.description}`
-      : `${item.label}`;
-  }
+  @Input() controlName!: string;
+  @Input() type: string = "text";
 }

@@ -1,4 +1,4 @@
 <div class="form-group">
   <label *ngIf="label" [for]="controlName">{{ label }}</label>
-  <input>
+  <input [type]="type" [formControlName]="controlName" [id]="controlName" [value]="control.value">
 </div>
