@@ -1,5 +1,13 @@
-import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
-import { Form, FormControl, FormGroup } from "@angular/forms";
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Optional,
+  Output,
+  SkipSelf,
+} from "@angular/core";
+import { ControlContainer, Form, FormControl, FormGroup } from "@angular/forms";
 import { DropdownInterface } from "../../types/dropdown.interface";
 
 @Component({
@@ -9,7 +17,13 @@ import { DropdownInterface } from "../../types/dropdown.interface";
 })
 export class InputComponent {
   @Input() label?: string;
-  @Input() form!: FormGroup;
   @Input() control!: string;
   @Input() type: string = "text";
+
+  constructor(
+    @Optional() @SkipSelf() private controlContainer: ControlContainer
+  ) {}
+  get formGroup(): FormGroup {
+    return this.controlContainer.control as FormGroup;
+  }
 }
