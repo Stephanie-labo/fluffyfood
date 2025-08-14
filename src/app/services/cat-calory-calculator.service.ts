@@ -1,25 +1,14 @@
 import { Injectable } from "@angular/core";
+import { CatCalorieFactorInterface } from "../types/cat-calorie-factor.interface";
 
 @Injectable({
   providedIn: "root",
 })
 export class CatCalorieCalculatorService {
-  /**
-   * Bereken dagelijkse calorie behoefte van een kat
-   * @param weight gewicht in kg
-   * @param breedFactor factor van het ras (bv. 1.1 voor Maine Coon)
-   * @param activityFactor factor van activiteit
-   * @param statusFactor factor van sterilisatie status
-   */
-  calculateCalories(
-    weight: number,
-    breedFactor: number,
-    activityFactor: number,
-    statusFactor: number
-  ): number {
-    if (weight <= 0) return 0;
-    const factor = Math.max(breedFactor + activityFactor + statusFactor, 1.0);
-    const rer = 70 * Math.pow(weight, 0.75);
+  calculateCalories(data: CatCalorieFactorInterface): number {
+    if (data.weight <= 0) return 0;
+    const factor = Math.max(data.breed + data.activity + data.status, 1.0);
+    const rer = 70 * Math.pow(data.weight, 0.75);
     const dailyCalories = Math.round(rer * factor);
     return dailyCalories;
   }
