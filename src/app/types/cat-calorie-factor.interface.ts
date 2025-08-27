@@ -1,6 +1,7 @@
 export interface CatCalorieFactorInterface {
   weight: number;
-  breed: number;
+  female: boolean;
+  breed: string;
   activity: number;
   status: number;
 }

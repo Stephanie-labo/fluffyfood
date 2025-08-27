@@ -25,6 +25,7 @@ export class FormComponent {
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
       breed: new FormControl(0, [Validators.required]),
+      female: new FormControl(Boolean(false), [Validators.required]),
       activity: new FormControl(0, [Validators.required]),
       status: new FormControl(0, [Validators.required]),
       weight: new FormControl(0, [Validators.required, Validators.min(0.1)]),

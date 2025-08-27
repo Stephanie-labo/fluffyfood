@@ -1,6 +1,6 @@
 export interface DropdownInterface {
   label: string;
-  value: number;
+  value: number | string;
   description?: string;
   default?: true;
 }
